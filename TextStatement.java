@@ -16,15 +16,4 @@ public class TextStatement extends Statement {
     return footer;
   }
 
-  public String value(Customer aCustomer) {
-    Enumeration rentals = aCustomer.getRentals();
-    String result = rentalHead(aCustomer);
-    while (rentals.hasMoreElements()) {
-      Rental each = (Rental) rentals.nextElement();
-      result += rentalBody(each);
-    }
-    result += rentalFooter(aCustomer);
-    return result;
-  }
-
 }
